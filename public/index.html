@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/view.css">
+
+  </head>
+  <body onload="authenticate(loadGames)">
+    <div class="container-fluid">
+      <div id='game-container' class='game-list-wrapper'>
+        <span class='select-game-text'>Select A Game</span>
+        <div id="game-list"></div>
+      </div>
+      <div id="game-panel" class="panel panel-default" style='display:none'>
+        <div id="game-heading" class="panel-heading">Panel Heading</div>
+        <div class="panel-body">
+        <div id="game-message">
+          Round 1
+        </div>
+        <div id="game-score-board"> </div>
+        </div>
+      </div>
+  </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+
+
+  <script type="text/javascript">
+  if (!String.prototype.format) {
+String.prototype.format = function() {
+  var args = arguments;
+  return this.replace(/{(\d+)}/g, function(match, number) {
+    return typeof args[number] != 'undefined'
+      ? args[number]
+      : match
+    ;
+  });
+};
+}
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/view.js"></script>
+</html>

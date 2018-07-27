@@ -1,0 +1,71 @@
+
+#score-board {
+  margin: 20px;
+}
+
+#point-buttons {
+    text-align: center;
+}
+
+#points {
+  margin:auto;
+  width: 50%;
+}
+
+
+.score-card {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+
+}
+.score-card-active {
+  border: 1px solid #c30 !important;
+  box-shadow: 10px 10px #777 !important;
+}
+
+.score-point-button {
+  width: 100px;
+  height: 100px;
+  margin: 25px;
+}
+
+.card {
+    max-width: 250px;
+    margin: auto;
+    border: 0.001em solid #ccc;
+}
+
+
+.card:hover {
+  box-shadow: 5px 5px #ccc;
+}
+
+.score-heading {
+  font-size: 0.65em;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+}
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+.score-value {
+  font-size: 1.5em;
+}
+
+.score-value {
+  font-size: 2em;
+}
+
+.show-score-entry {
+  visibility: visible;
+}
+
+.hide-score-entry {
+  visibility: hidden;
+}

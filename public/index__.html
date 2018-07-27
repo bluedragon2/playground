@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body onload="authenticate(loadGames)">
+    <div class='container-fluid'>
+    <div id='menu'></div>
+    <div id='game-list'></div>
+    <div id='new-game'></div>
+    <div id='game'>
+      <div id='score-board' class='row'></div>
+      <div id='points' class='hide-score-entry'>
+          <div id='point-buttons'></div>
+          <form class="form-inline">
+            <div class="form-group">
+              <input id="team-id" type="text" class="form-control"><br/>
+            </div>
+              <div class="form-group">
+              <input id="score-value" type="text" class="form-control"><br/>
+              </div>
+              <div class="form-group">
+                <button id="score-update-button" type="button" class="btn btn-primary">Add points </button>
+              </div>
+        </form>
+        <div class="form-group form-inline">
+          <input id="message-input" type="text" class="form-control"<br/>
+          <button id="message-button" type="message" class="btn btn-primary">Message</button>
+        </div>
+      </div>
+      <div id='stats'></div>
+    </div>
+  </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+
+
+  <script type="text/javascript">
+  if (!String.prototype.format) {
+String.prototype.format = function() {
+  var args = arguments;
+  return this.replace(/{(\d+)}/g, function(match, number) {
+    return typeof args[number] != 'undefined'
+      ? args[number]
+      : match
+    ;
+  });
+};
+}</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</html>
